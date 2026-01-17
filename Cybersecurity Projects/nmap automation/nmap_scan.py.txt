@@ -1,0 +1,5 @@
+import os
+
+target = input("Enter target IP or website: ")
+command = f"nmap -A {target}"
+os.system(command)

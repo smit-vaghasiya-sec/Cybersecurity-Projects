@@ -1,0 +1,11 @@
+suspicious_words = ["failed", "error", "unauthorized", "attack", "denied"]
+
+file = open("logs.txt", "r")
+logs = file.readlines()
+
+for line in logs:
+    for word in suspicious_words:
+        if word in line.lower():
+            print("Suspicious Log Found:", line)
+
+file.close()
